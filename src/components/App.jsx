@@ -1,8 +1,11 @@
 import Profile from './Profile/Profile';
 import Statistics from './Statistics/Statistics';
+import FriendList from './FriendList/FriendList';
+
 
 import user from '../path/to/user.json';
 import data from '../path/to/data.json';
+import friends from '../path/to/friends.json';
 
 export const App = () => {
   return (
@@ -18,6 +21,7 @@ export const App = () => {
     >
 
     <Profile
+      // const { username, tag, location, avatar, stats } = user;
       username={user.username}
       tag={user.tag}
       location={user.location}
@@ -26,7 +30,15 @@ export const App = () => {
     />
       
     <Statistics
-      title="Upload stats" stats={data}
+      title="Upload stats"
+      stats={data}
+    />
+    <Statistics
+      stats={data}
+    />
+      
+    <FriendList
+      friends={friends}
     />
 
       Hello Pandora!!!
