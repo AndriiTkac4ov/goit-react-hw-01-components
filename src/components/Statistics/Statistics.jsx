@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { getRandomHexColor } from 'utils/getRandomHexColor';
 import css from './Statistics.module.css';
 
 export default function Statistics(props) {
@@ -32,8 +33,4 @@ Statistics.propTypes = {
             percentage: PropTypes.number.isRequired,
         }),
     )
-}
-
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
