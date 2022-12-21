@@ -1,13 +1,15 @@
 import PropTypes from 'prop-types';
+import css from './FriendListItem.module.css';
+import {iconSize} from 'constants';
 
 export default function FriendListItem(props) {
     const { avatar, name, isOnline } = props;
 
     return (
-        <li class="item">
-            <span class="status">{isOnline}</span>
-            <img class="avatar" src={avatar} alt="User avatar" width="48" />
-            <p class="name">{name}</p>
+        <li className={css.item}>
+            <span className={`${css.status} ${isOnline && css.isOnline}`}></span>
+            <img className={css.avatar} src={avatar} alt="User avatar" width={iconSize.xxl} />
+            <p className={css.name}>{name}</p>
         </li>
     )
 }

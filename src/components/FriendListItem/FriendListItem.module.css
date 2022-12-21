@@ -1,0 +1,37 @@
+.item{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px orange solid;
+    border-radius: 8px;
+}
+
+.item:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.status::before{
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: red;
+}
+
+.isOnline::before{
+    background-color: green;
+}
+
+.avatar{}
+
+.name{
+    width: 200px;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 2;
+    margin: 0;
+}
